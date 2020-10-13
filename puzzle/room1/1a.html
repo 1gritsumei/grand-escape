@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="1a.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../../lib/g.ico">
+    <title>謎解き</title>
+    <script>
+        function checkCode(){
+            
+            if(["脱獄", "だつごく", "脱獄です", "だつごくです"].includes(document.getElementById("code").value.trim()) ){
+                document.getElementById("unlocker").innerHTML = "ロック解除成功!";
+                document.getElementById("content").innerHTML = "<img src=\"../../lib/puzzle2.png\"/> <p>？がこの部屋のキーワードです。</p>";
+                document.getElementById("keytable").innerHTML = "";
+            }else{
+                document.getElementById("code").value="";
+                document.getElementById("ifincorrect").innerHTML="ロック解除失敗!";
+            }
+        }
+        // document.getElementById("code").addEventListener("keyup", function(event) {
+        // // Number 13 is the "Enter" key on the keyboard
+        // if (event.keyCode === 13) {
+        //     // Cancel the default action, if needed
+        //     event.preventDefault();
+        //     // Trigger the button element with a click
+        //     document.getElementById("submit").click();
+        // }
+        // });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html"><img src="../../lib/gesc.jpg"/></a> 
+        </nav>
+    </header>
+    <div id="unlocker">
+        
+            パスコードを入力: <input type="text" name="code" id="code"/>
+            <input type="button" onclick="checkCode()" value="確定" id="submit">
+        
+        <p id="ifincorrect"></p>
+    </div>
+    <div id="content"></div>
+    <div id="keytable"><img src="../../lib/keytable.jpg"/></div>
+</body>
+</html>

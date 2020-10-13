@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "游ゴシック", "ヒラギノ角ゴ ProN", sans-serif;
+}
+nav img{
+    width: 35%;
+}
+#content{
+    margin-top: 20px;
+  }
+  #content img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="2b.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../../lib/g.ico">
+    <title>謎解き</title>
+    <script>
+        function checkCode(){
+            
+            if(document.getElementById("id").value.trim()=== "thisgame" && document.getElementById("pw").value.trim()=== "satotama1g"){
+                document.getElementById("unlocker").innerHTML = "<p>ログイン成功!<p>";
+                document.getElementById("content").innerHTML = "<p>この部屋のキーワードとなる数字は、「グロタンディーク素数」です。</p>";
+                document.getElementById("keytable").innerHTML = "";
+            }else{
+                document.getElementById("id").value="";
+                document.getElementById("pw").value="";
+                document.getElementById("ifincorrect").innerHTML="ログイン失敗!";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html"><img src="../../lib/gesc.jpg"/></a> 
+        </nav>
+    </header>
+    <div id="unlocker">
+            IDを入力: <input type="text" name="id" id="id"/><br/>
+            パスコードを入力: <input type="password" name="password" id="pw"/><br/>
+            <input type="button" onclick="checkCode()" value="確定" id="submit">
+        
+        <p id="ifincorrect"></p>
+    </div>
+    <div id="content"></div>
+    <div id="keytable"><img src="../../lib/keytable.jpg"/></div>
+</body>
+</html>
